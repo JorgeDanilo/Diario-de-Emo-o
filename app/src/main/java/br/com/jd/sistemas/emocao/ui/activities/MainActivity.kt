@@ -24,7 +24,9 @@ class MainActivity : AppCompatActivity() {
         btn_salvar.setOnClickListener {
             if (!txt_emocao.text.isNullOrEmpty()) {
                 val emocao = Emocao(motivo = txt_emocao.text.toString(), dataCadastro = Date())
-                emocaoViewModel.add(emocao)
+                emocaoViewModel.add(emocao).apply {
+                    Toast.makeText(this@MainActivity, "Motivo Salvo com sucesso!", Toast.LENGTH_SHORT).show()
+                }
             } else {
                 Toast.makeText(this, "O campo motivo é obrigatório", Toast.LENGTH_SHORT).show()
             }
