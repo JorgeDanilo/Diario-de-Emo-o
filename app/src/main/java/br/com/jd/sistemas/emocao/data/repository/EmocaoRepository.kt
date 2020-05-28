@@ -18,4 +18,8 @@ class EmocaoRepository(private val emocaoDao: EmocaoDao)  {
    fun add(emocao: Emocao) {
       emocaoDao.add(emocao)
    }
+
+   fun remove(emocao: Emocao) {
+      emocaoDao.remove(emocao)
+   }
 }

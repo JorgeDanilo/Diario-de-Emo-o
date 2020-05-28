@@ -27,6 +27,12 @@ class EmocaoViewModel(private val emocaoRepository: EmocaoRepository): ViewModel
         }
     }
 
+    fun remove(emocao: Emocao) {
+        viewModelScope.launch(Dispatchers.IO) {
+            emocaoRepository.remove(emocao)
+        }
+    }
+
     private fun fetchData() {
         viewModelScope.launch {
             try {
