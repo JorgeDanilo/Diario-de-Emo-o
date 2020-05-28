@@ -35,5 +35,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:paddingTop="25dp"
+        android:id="@+id/rv_emocoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>
