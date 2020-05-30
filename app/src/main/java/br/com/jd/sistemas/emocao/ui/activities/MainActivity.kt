@@ -46,8 +46,8 @@ class MainActivity : AppCompatActivity() {
         emocaoViewModel.loadingState.observe(this, androidx.lifecycle.Observer {
             when(it.status) {
                 LoadingState.Status.FAILED -> Toast.makeText(baseContext, it.msg, Toast.LENGTH_SHORT).show()
-                LoadingState.Status.RUNNING -> Toast.makeText(baseContext, "Loading", Toast.LENGTH_SHORT).show()
-                LoadingState.Status.SUCCESS -> Toast.makeText(baseContext, "Success", Toast.LENGTH_SHORT).show()
+//                LoadingState.Status.RUNNING -> Toast.makeText(baseContext, "Loading", Toast.LENGTH_SHORT).show()
+//                LoadingState.Status.SUCCESS -> Toast.makeText(baseContext, "Success", Toast.LENGTH_SHORT).show()
             }
         })
     }
@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this@MainActivity, "Motivo Salvo com sucesso!", Toast.LENGTH_SHORT).show()
                 }
             } else {
-                Toast.makeText(this, "O campo motivo é obrigatório", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.msg_emocao_required), Toast.LENGTH_SHORT).show()
             }
         }
     }

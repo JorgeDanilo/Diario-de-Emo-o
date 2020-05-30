@@ -2,12 +2,11 @@ package br.com.jd.sistemas.emocao.di
 
 import android.app.Application
 import androidx.room.Room
-import br.com.jd.sistemas.emocao.data.database.EmocaoDao
 import br.com.jd.sistemas.emocao.data.database.AppDataBase
+import br.com.jd.sistemas.emocao.data.database.EmocaoDao
 import br.com.jd.sistemas.emocao.data.repository.EmocaoRepository
 import br.com.jd.sistemas.emocao.viewmodel.EmocaoViewModel
 import org.koin.android.ext.koin.androidApplication
-import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val viewModelModule = module {

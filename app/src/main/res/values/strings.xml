@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Diario da Emoção</string>
+    <string name="msg_emocao_required">O campo motivo é obrigatório</string>
 </resources>
