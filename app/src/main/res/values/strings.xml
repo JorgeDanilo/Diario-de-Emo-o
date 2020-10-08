@@ -3,4 +3,7 @@
     <string name="msg_emocao_required">O campo motivo é obrigatório</string>
     <string name="content_description_button">Button Remove</string>
     <string name="data_create">Data</string>
+    <string name="title_add_emocao">Adicione a sua emoção</string>
+    <string name="subtitle_add_emocao">Descreva aqui sua Emoção ao longo do dia</string>
+    <string name="btn_save">Salvar</string>
 </resources>

@@ -18,47 +18,45 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/txt_emocao"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/txt_emocao"
+        app:layout_constraintStart_toStartOf="@+id/txt_emocao" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/txt_emocao"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:hint="@string/subtitle_add_emocao"
+        android:layout_marginTop="67dp"
+        android:hint="Descreva aqui sua Emoção ao longo do dia"
         android:lines="5"
-        app:layout_constraintBottom_toTopOf="@+id/btn_salvar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btn_salvar"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_salvar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginBottom="20dp"
-        android:text="@string/btn_save"
+        android:layout_marginTop="14dp"
+        android:text="Salvar"
         android:textColor="@color/colorPrimary"
-        app:layout_constraintBottom_toTopOf="@+id/rv_emocoes"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/rv_emocoes"
+        app:layout_constraintStart_toStartOf="@+id/rv_emocoes"
         app:layout_constraintTop_toBottomOf="@+id/txt_emocao" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_emocoes"
-        android:layout_width="match_parent"
+        android:layout_width="382dp"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_salvar"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="244dp"
+        android:paddingTop="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_salvar"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.52" />
 </androidx.constraintlayout.widget.ConstraintLayout>
