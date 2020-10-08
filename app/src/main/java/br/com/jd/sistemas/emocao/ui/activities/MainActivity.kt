@@ -2,9 +2,9 @@ package br.com.jd.sistemas.emocao.ui.activities
 
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.jd.sistemas.emocao.R
@@ -67,12 +67,28 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    var mListener: OnClickListener = object : OnClickListener {
+    private var mListener: OnClickListener = object : OnClickListener {
         override fun onCliCK(emocao: Emocao) {
-            emocoesAdapter.remove(emocao).apply {
-                emocaoViewModel.remove(emocao).apply {
-                    Toast.makeText(this@MainActivity, "Emoção excluída com Sucesso!", Toast.LENGTH_SHORT).show()
+            val alertDialog: AlertDialog = this@MainActivity.let {
+                val builder = AlertDialog.Builder(it)
+                builder.apply {
+                    setMessage(getString(R.string.title_msg_remove))
+                    setPositiveButton(getString(R.string.btn_yes)) { _, _ ->
+                        removeEmocao(emocao)
+                    }
+                    setNegativeButton(getString(R.string.btn_cancel)) { _, _ -> }
                 }
+                builder.create()
+            }
+            alertDialog.show()
+        }
+
+    }
+
+    private fun removeEmocao(emocao: Emocao) {
+        emocoesAdapter.remove(emocao).apply {
+            emocaoViewModel.remove(emocao).apply {
+                Toast.makeText(this@MainActivity, "Emoção excluída com Sucesso!", Toast.LENGTH_SHORT).show()
             }
         }
     }
